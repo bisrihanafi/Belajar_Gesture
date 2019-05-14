@@ -1,5 +1,6 @@
 package com.gmail.bisrihanafi.belajar_gesture;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v4.view.GestureDetectorCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -75,7 +76,8 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
     @Override
     public void onLongPress(MotionEvent e) {
         gestureText.setText ("Long Press");
-        ly.setBackgroundColor(Color.BLACK);
+        Intent i = new Intent(MainActivity.this,MultiTouch.class);
+        startActivity(i);
     }
 
     @Override
